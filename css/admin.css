@@ -79,12 +79,13 @@ a.btn.medium {min-width: 120px; padding: 0 15px; line-height: 36px; font-size: 1
 a.btn.large {min-width: 160px; padding: 0 18px; line-height: 42px; font-size: 17px;}
 a.btn.default {background: #ccc;}
 a.btn.mint {background: #1abc9c;}
-a.btn.green {background: #2ecc71;}
-a.btn.blue {background: #3498db;}
+a.btn.green {background: #5cb85c;}
+a.btn.blue {background: #337ab7;}
 a.btn.purple {background: #9b59b6;}
 a.btn.midnight {background: #34495e;}
 a.btn.yellow {background: #f1c40f;}
-a.btn.pumpkin {background: #d35400;}
+a.btn.orange {background: #f0ad4e;}
+a.btn.red {background: #d9534f;}
 a.btn.coral {background: #e74c3c;}
 a.btn.left {float: left; margin-left: 4px;}
 a.btn span.fa.left {margin-right: 5px;}
