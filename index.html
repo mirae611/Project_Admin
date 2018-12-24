@@ -5,59 +5,20 @@
     <title>Admin</title>
     <link rel="stylesheet" href="css/admin.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/datepicker.min.css">
     
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/admin.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/datepicker.min.js"></script>
+    <script type="text/javascript" src="js/datepicker.en.js"></script>
+    <script type="text/javascript" src="js/datepicker.ko.js"></script>
+    
+    
 </head>
-<body>
-    <nav>
-        <div class="top"><h1>Adminator</h1></div>
-        <ul>
-            <li><a href="#"><i class="fas fa-home"></i>Dashboard</a></li>
-            <li><a href="#"><i class="fas fa-info-circle"></i>Info</a>
-                <ul>
-                    <li><a href="#">회원정보</a>
-                        <ul>
-                            <li><a href="#">일반회원</a></li>
-                            <li><a href="#">채용담당자</a></li>
-                            <li><a href="#">관리자</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">기관정보</a>
-                        <ul>
-                            <li><a href="#">대학정보</a></li>
-                            <li><a href="#">대학원정보</a></li>
-                            <li><a href="#">학과정보</a></li>
-                            <li><a href="#">학과분류기준</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="#"><i class="fas fa-pen"></i>Forms</a>
-                <ul>
-                    <li><a href="page/tables">Tables</a></li>
-                    <li><a href="index.html">Form UI<i class="fas fa-check check"></i></a></li>
-                </ul>
-            </li>
-            <li><a href="#"><i class="fas fa-palette"></i>UI Elements</a>
-                <ul>
-                    <li><a href="page/layout.html">Layout<i class="fas fa-check check"></i></a></li>
-                    <li><a href="page/buttons.html">Buttons<i class="fas fa-check check"></i></a></li>
-                </ul>
-            </li>
-            <li><a href="#"><i class="fas fa-file"></i>Pages</a>
-                <ul>
-                    <li><a href="#">404</a></li>
-                    <li><a href="#">500</a></li>
-                    <li><a href="#">Sign In</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                </ul>
-            </li>
-            <li><a href="#"><i class="fas fa-calendar"></i>Calendar</a></li>
-            <li><a href="#"><i class="fas fa-chart-bar"></i>Charts</a></li>
-        </ul>
-    </nav>
-    <header>
+<body onload="loaded()">
+    <header id="header">
+        <div class="logo"><h1>Adminator</h1></div>
         <div class="wrap">
             <a class="nav_btn" href="#"><i class="fas fa-bars"></i></a>
             <a href="#"><i class="fas fa-search"></i></a>
@@ -68,6 +29,56 @@
             </ul>
         </div>
     </header>
+    <nav id="nav">
+        <div id="wrapper">
+            <div id="scroller">
+                <ul class="nav_menu">
+                    <li><a href="#"><i class="fas fa-home"></i>Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i>Info</a>
+                        <ul>
+                            <li><a href="#">회원정보</a>
+                                <ul>
+                                    <li><a href="#">일반회원</a></li>
+                                    <li><a href="#">채용담당자</a></li>
+                                    <li><a href="#">관리자</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">기관정보</a>
+                                <ul>
+                                    <li><a href="#">대학정보</a></li>
+                                    <li><a href="#">대학원정보</a></li>
+                                    <li><a href="#">학과정보</a></li>
+                                    <li><a href="#">학과분류기준</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-pen"></i>Forms</a>
+                        <ul>
+                            <li><a href="page/tables">Tables</a></li>
+                            <li><a href="index.html">Form UI<i class="fas fa-check check"></i></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-palette"></i>UI Elements</a>
+                        <ul>
+                            <li><a href="page/layout.html">Layout<i class="fas fa-check check"></i></a></li>
+                            <li><a href="page/buttons.html">Buttons<i class="fas fa-check check"></i></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-file"></i>Pages</a>
+                        <ul>
+                            <li><a href="#">404</a></li>
+                            <li><a href="#">500</a></li>
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">Sign Up</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-calendar"></i>Calendar</a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar"></i>Charts</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <main id="main">
         <h2>Form</h2>
         <p>기본폼 정의  (input, textarea, checkbox, radio, image, file 등)</p>
@@ -86,20 +97,20 @@
                         <tr>
                             <th><label for="password1"><span class="required" title="필수입력">*</span>비밀번호</label></th>
                             <td>
-                                <input type="password" name="password1" id="password1">
+                                <input type="password" name="password1" id="password1" />
                             </td>
                         </tr>
                         <tr>
                            <tr>
                             <th><label for="password2"><span class="required" title="필수입력">*</span>비밀번호 확인</label></th>
                             <td>
-                                <input type="password" name="password2" id="password2">
+                                <input type="password" name="password2" id="password2" />
                             </td>
                         </tr>
                         <tr>
                             <th><label for="name"><span class="required" title="필수입력">*</span>이름</label></th>
                             <td>
-                                <input type="text" name="name" id="name">
+                                <input type="text" name="name" id="name" />
                             </td>
                         </tr>
                         <tr>
@@ -216,7 +227,7 @@
                         <tr>
                             <th><label for="email">이메일</label></th>
                             <td>
-                                <input type="email" name="email" id="email"> @ 
+                                <input type="email" name="email" id="email" /> @ 
                                 <select name="email2" id="email2">
                                     <option>선택</option>
                                     <option value="naver.com">naver.com</option>
@@ -248,7 +259,7 @@
                         <tr>
                             <th><label for="date">예약날짜</label></th>
                             <td>
-                                <input type="text" name="date" id="date">
+                                <input type='text' name="date" id="date" class='datepicker-here date' data-language='ko' />
                                 <a class="btn icon purple" href="#"><i class="fas fa-calendar"></i></a>
                             </td>
                         </tr>
@@ -277,11 +288,14 @@
                                 <textarea name="" id="" cols="30" rows="10"></textarea>
                             </td>
                         </tr>
-
                     </tbody>
                 </table>
             </div>
         </section>
     </main>
+    <script>
+    'use strict';
+    $('input.date').data('datepicker');
+    </script>
 </body>
 </html>
