@@ -39,7 +39,8 @@ body {background: #f9fafb; color: #313435; font-family:-apple-system,BlinkMacSys
 
 #main {height: 100%; padding: 96px 20px 140px 310px; color: #505458; transition: all .5s;}
 #main.off {padding-left: 30px;}
-#main h2 + p {font-size: 14px; color: #72777a;}
+#main .title {margin: 0 0 50px 30px;}
+#main .title h2 + p {font-size: 14px; color: #72777a;}
 
 /*dachboard*/
 .widget.count div {padding: 30px;}
